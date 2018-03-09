@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 abstract class Person
 {
-    protected String name;
-    protected boolean isMan;
-    protected int age;
+    private String name;
+    private boolean isMan;
+    private int age;
 
     protected Person(String name, boolean isMan, int age)
     {
