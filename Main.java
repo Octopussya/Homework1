@@ -2,19 +2,19 @@ import java.util.ArrayList;
 
 abstract class Person
 {
-    protected String _name;
-    protected boolean _isMan;
-    protected int _age;
+    protected String name;
+    protected boolean isMan;
+    protected int age;
 
     protected Person(String name, boolean isMan, int age)
     {
-        _name = name;
-        _isMan = isMan;
-        _age = age;
+        this.name = name;
+        this.isMan = isMan;
+        this.age = age;
     }
     protected void print()
     {
-        System.out.format("name: %s\ngender: %s\nage: %d\n", _name, _isMan ? "male" : "female", _age);
+        System.out.format("name: %s\ngender: %s\nage: %d\n", name, isMan ? "male" : "female", age);
     }
 };
 
@@ -57,20 +57,20 @@ class Child extends Person
 
 class Family
 {
-    private Father _father;
-    private Mother _mother;
-    private ArrayList<Child>  _children;
+    private Father father;
+    private Mother mother;
+    private ArrayList<Child>  children;
     private int childrenCount;
 
     public Family(Father father, Mother mother, ArrayList<Child> children)
     {
-        _father = father;
-        _mother = mother;
-        _children = children;
+        this.father = father;
+        this.mother = mother;
+        this.children = children;
     }
     public boolean isValid()
     {
-        return _children.size() >= 1 && _children.size() <= 5;
+        return children.size() >= 1 && children.size() <= 5;
     }
     public void print()
     {
@@ -79,9 +79,9 @@ class Family
             System.out.println("invalid family");
             return;
         }
-        _father.print();
-        _mother.print();
-        for(Child child : _children)
+        father.print();
+        mother.print();
+        for(Child child : children)
             child.print();
     }
 };
