@@ -30,6 +30,7 @@ class Matrix
         int n = 0;
         Scanner in = new Scanner(System.in);
         ArrayList<ArrayList<Integer>> matrix = new ArrayList<ArrayList<Integer>>();
+        System.out.println("Введите матрицу(чтобы закончить ввод нажмите клавишу Enter и потом ctrl+D)");
         while(in.hasNextLine())
         {
             String s = in.nextLine();//считываем строки
@@ -46,7 +47,8 @@ class Matrix
             boolean forw = i%2 != 0;
             n += Sorter.sort(matrix.get(i), forw);
         }
-
+         
+        System.out.println("Получившаяся матрица");
         for(ArrayList<Integer> s : matrix)// вывод 
         {
             for(Integer num : s)
