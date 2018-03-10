@@ -24,11 +24,13 @@ class Matrix
         for(int i = 0; i < matrix.size(); i++)// четная или нечетная строка + сортировка
         {
             boolean forw = i%2 != 0;
-            n += Sorter.sort(matrix.get(i), forw);
+            Sorter sort = new Sorter();
+            n += sort.sort(matrix.get(i), forw);
         }
          
         System.out.println("Получившаяся матрица");
-        Print.printMatrix(matrix);
+        Print print = new Print();
+        print.printMatrix(matrix);
         System.out.println("Amoumt of itterations = "+ n);
     }
 }

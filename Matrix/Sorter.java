@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 class Sorter
 {
-    public static int sort(ArrayList<Integer> list, boolean forward) //сортировка строк
+    public int sort(ArrayList<Integer> list, boolean forward) //сортировка строк
     {
         int iter = 0;
         for(int j = 0; j < list.size() - 1; j++)
